@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@400;600;700;900&display=swap');
+
+
+:root {
+    --dark-gray: #181818;
+    --grayish: #282828;
+}
+
+body {
+    background-color: #FBFCF8;
+}
+
+.navbar {
+    background-color: var(--dark-gray);
+}
+
+.hero {
+    min-height: calc(95vh - 64px);
+    background-color: var(--grayish);
+}
+
+.heading {
+    line-height: 85px !important;
+}
+
+section h1 {
+    font-family:'Poppins', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+
+.about-img {
+    transform: scaleX(-1);
+}
+
+#projects {
+    background-color: var(--grayish);
+}
+
+#experience p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#experience span {
+    color: #2563EB;
+}
+
+.card-1 {
+    border-radius: 5px;
+}
+
+.card-1 p {
+    padding-bottom: 20px;
+}
+
+#footer {
+    background-color: var(--grayish);
+}
+
+
+.footer-heading .text-3xl {
+    word-spacing: 5px;
+}
+
+
+/* Media Queries */
+@media (max-width: 1023px){
+    .heading {
+        line-height: 70px !important;
+    }
+}
+
+
+@media (max-width: 639px){
+    .hamburger-icon {
+        cursor: pointer;
+        width: 24px;
+        height: 18px;
+        position: relative;
+        transition: all 0.25s;
+        }
+    
+    .hamburger-top,
+    .hamburger-middle,
+    .hamburger-bottom {
+        width: 24px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: rotate(0);
+        transition: all 0.5s;
+    }
+    .hamburger-middle{
+        transform: translateY(7px);
+    }
+    .hamburger-bottom{
+        transform: translateY(14px);
+    }
+
+    .open {
+        transform: rotate(90deg);
+        transform: translateY(0px)
+    }
+
+    .open .hamburger-top {
+        transform: rotate(45deg) translateY(6px) translate(6px);
+    }
+    .open .hamburger-middle {
+        display: none;
+    }
+    .open .hamburger-bottom {
+        transform: rotate(-45deg) translateY(6px) translate(-6px);
+    }
+
+    #mobile-menu {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        color: black;
+        width: 100vw;
+        align-items: center;
+        gap: 15px;
+        transition: all .8s;
+        background-color: var(--dark-gray);
+        color: white;
+        overflow-x: hidden;
+    }
+
+    .heading {
+        margin-top: 2rem;
+        line-height: 55px !important;
+    }
+}
